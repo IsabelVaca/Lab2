@@ -31,4 +31,11 @@ class SaboresViewModel : ViewModel() {
         if (!ReviewValidator.isValid(stars, comment)) return
         reviews = reviews + Review(restaurantId, stars, comment.trim())
     }
+
+    val myReviews: List<MyReviewItem>
+        get() = reviews.reversed().mapNotNull { review ->
+            restaurantById(review.restaurantId)?.let { MyReviewItem(it.name, review) }
+        }
 }
+
+data class MyReviewItem(val restaurantName: String, val review: Review)
