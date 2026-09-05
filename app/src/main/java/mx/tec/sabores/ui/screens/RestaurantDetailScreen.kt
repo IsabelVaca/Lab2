@@ -95,7 +95,7 @@ fun RestaurantDetailScreen(
                 items(reviews) { review ->
                     Card(Modifier.fillMaxWidth()) {
                         Column(Modifier.padding(14.dp)) {
-                            StarsRow(review.stars)      // una reseña: solo sus estrellas
+                            StarsRow(review.stars)
                             Spacer(Modifier.height(6.dp))
                             Text(review.comment, style = MaterialTheme.typography.bodyMedium)
                         }
@@ -103,7 +103,7 @@ fun RestaurantDetailScreen(
                 }
             }
 
-            item { Spacer(Modifier.height(72.dp)) }   // que el FAB no tape la última reseña
+            item { Spacer(Modifier.height(72.dp)) }
         }
     }
 }

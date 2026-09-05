@@ -72,7 +72,7 @@ private fun ListPreview() {
     SaboresTheme {
         RestaurantListScreen(
             restaurants = RestaurantRepository().getAll(),
-            summaryOf = { RatingSummary(4.2, 3) },   // datos falsos: es solo el dibujo
+            summaryOf = { RatingSummary(4.2, 3) },
             onRestaurantClick = {}
         )
     }
